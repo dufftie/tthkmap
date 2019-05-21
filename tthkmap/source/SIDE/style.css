@@ -1,37 +1,31 @@
-.BackGround{
+.Floor1, .Floor2{
   position: absolute;
 }
 
-.DBLOCK, .EBLOCK{
-  position: absolute;
-  transform-origin:center;
-  transform: scale(1);
+.Floor1{
+  opacity: 100;
+  margin-top: 0%;
   transition: 1s;
 }
 
-.DBLOCK:hover, .EBLOCK:hover{
-  transform-origin:center;
-  transform: scale(1.3);
+.Floor1.hideIt{
+  opacity: 0;
+  margin-top: 10%;
   transition: 1s;
 }
 
-.DBLOCK{
-  top: 270px;
-  left: 210px;
-  width: 12%;
+.Floor2{
+  opacity: 0;
+  margin-top: 10%;
 }
 
-.EBLOCK{
-  top: 340px;
-  left: 300px;
-  width: 10%;
+.Floor2.showIt{
+  opacity: 100;
+  margin-top: 0%;
+  transition: 1s;
 }
 
-
-.EBLOCK:hover a .label:after{
-    content:'ASDSDASD';
-}
-
-.label:hover:after{
-    content:'NEW';
+.body.zoom{
+  transform: scale(1.5);
+  transition: 1s;
 }
