@@ -3,17 +3,22 @@ function switchMap(){
     var button = document.getElementsByClassName('switchButton')[0].value;
     var floor1 = document.getElementsByClassName('Floor1')[0];
     var floor2 = document.getElementsByClassName('Floor2')[0];
+    var switchButton = document.getElementsByClassName('switchButton')[0];
 
     if(button=="first"){
       floor1.classList.add('hideIt');
       floor2.classList.add('showIt');
       floor2.style.transition = 1;
+      switchButton.classList.add('Second');
       document.getElementsByClassName('switchButton')[0].value = "second";
+      document.getElementsByClassName('switchButton')[0].innerHTML = "First";
     }
     else{
       floor1.classList.remove('hideIt');
       floor2.classList.remove('showIt');
+      switchButton.classList.remove('Second');
        document.getElementsByClassName('switchButton')[0].value = "first";
+       document.getElementsByClassName('switchButton')[0].innerHTML = "Second";
     }
 }
 
@@ -25,7 +30,7 @@ function zoom(){
 
 
 <link rel="stylesheet" type="text/css" href="style.css">
-  <button onclick="switchMap()" class="switchButton" value="first">Change Floor</button>
+  <button onclick="switchMap()" class="switchButton" value="first">Second</button>
 <body class="body">
   <div class="Container">
     <div class="Floor1">

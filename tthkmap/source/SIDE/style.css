@@ -2,55 +2,55 @@
   margin-left: 250px;
   width: 100%;
 }
-
 .Floor1, .Floor2{
   position: absolute;
 }
-
 .Floor1{
   opacity: 100;
   margin-top: 0%;
   transition: 1s;
   z-index: 2;
 }
-
 .Floor1.hideIt{
   opacity: 0;
   margin-top: 10%;
   transition: 1s;
   z-index: 1;
 }
-
 .Floor2{
   opacity: 0;
   margin-top: 10%;
 }
-
 .Floor2.showIt{
   opacity: 100;
   margin-top: 0%;
   transition: 1s;
   z-index: 3;
 }
-
 .body.zoom{
   transform: scale(1.5);
   transition: 1s;
 }
-
-
 .Floor1, .Floor2{
   position: absolute;
 }
-
 .switchButton{
+  width: 600px;
   font-size: 72px;
   z-index: 10;
   border: none;
-  background-color: #3d3d5d;
+  background: linear-gradient(270deg, rgba(2,0,36,1) 0%, rgba(17,39,116,1) 0%, rgba(0,212,255,0) 100%);
   color: white;
+  margin-left: 200px;
+  transition: 1s;
+  text-align: right;
+  border-radius: 10px;
 }
-
+.switchButton.Second{
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(49,139,108,1) 0%, rgba(0,212,255,0) 100%);
+  margin-left: 0;
+  text-align: left;
+}
 .DBLOCK, .EBLOCK, .ABLOCK, .BLOCK, .CBLOCK{
   position: absolute;
   transform-origin:center;
