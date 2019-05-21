@@ -1,1 +1,22 @@
-<img src="FIRST_SIDE.png" alt="background">
+<script type="text/javascript">
+function switchMap(){
+    var floor1 = document.getElementsByClassName('Floor1')[0];
+    var floor2 = document.getElementsByClassName('Floor2')[0];
+
+    floor1.classList.add('hideIt');
+    floor2.classList.add('showIt');
+}
+</script>
+
+
+<link rel="stylesheet" type="text/css" href="style.css">
+<button onclick="switchMap()">Swap</button>
+
+<div class="Container">
+  <div class="Floor1">
+    <img src="FIRST_SIDE.png" alt="background" style="width: 750px;">
+  </div>
+  <div class="Floor2">
+    <img src="SECOND_SIDE.png" alt="background" style="width: 750px;">
+  </div>
+</div>
