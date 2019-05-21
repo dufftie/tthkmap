@@ -25,15 +25,27 @@ function zoom(){
 
 
 <link rel="stylesheet" type="text/css" href="style.css">
+  <button onclick="switchMap()" class="switchButton" value="first">Change Floor</button>
 <body class="body">
-  <button onclick="switchMap()" class="switchButton" value="first">Swap</button>
-  <button onclick="zoom()">Zoom</button>
   <div class="Container">
     <div class="Floor1">
       <img src="FIRST_SIDE.png" alt="background" style="width: 750px;">
+      <div class="Front">
+        <img src="DBACK.png" width="45%" class="DBLOCK"/>
+        <img src="EBACK.png" width="45%" class="EBLOCK"/>
+        <img src="CBACK.png" width="45%" class="CBLOCK"/>
+        <img src="ABACK.png" width="45%" class="ABLOCK"/>
+        <img src="BLOCK.png" width="45%" class="BLOCK"/>
+      </div>
     </div>
     <div class="Floor2">
       <img src="SECOND_SIDE.png" alt="background" style="width: 750px;">
+      <div class="Front">
+        <img src="DBACK.png" width="45%" class="DBLOCK2"/>
+        <img src="EBACK.png" width="45%" class="EBLOCK2"/>
+        <img src="ABACK.png" width="45%" class="ABLOCK2"/>
+        <img src="BLOCK.png" width="45%" class="BLOCK2"/>
+      </div>
     </div>
   </div>
 </body>
