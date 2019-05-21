@@ -1,22 +1,39 @@
 <script type="text/javascript">
 function switchMap(){
+    var button = document.getElementsByClassName('switchButton')[0].value;
     var floor1 = document.getElementsByClassName('Floor1')[0];
     var floor2 = document.getElementsByClassName('Floor2')[0];
 
-    floor1.classList.add('hideIt');
-    floor2.classList.add('showIt');
+    if(button=="first"){
+      floor1.classList.add('hideIt');
+      floor2.classList.add('showIt');
+      floor2.style.transition = 1;
+      document.getElementsByClassName('switchButton')[0].value = "second";
+    }
+    else{
+      floor1.classList.remove('hideIt');
+      floor2.classList.remove('showIt');
+       document.getElementsByClassName('switchButton')[0].value = "first";
+    }
+}
+
+function zoom(){
+  var body = document.getElementsByClassName('body')[0];
+  body.classList.add('zoom');
 }
 </script>
 
 
 <link rel="stylesheet" type="text/css" href="style.css">
-<button onclick="switchMap()">Swap</button>
-
-<div class="Container">
-  <div class="Floor1">
-    <img src="FIRST_SIDE.png" alt="background" style="width: 750px;">
+<body class="body">
+  <button onclick="switchMap()" class="switchButton" value="first">Swap</button>
+  <button onclick="zoom()">Zoom</button>
+  <div class="Container">
+    <div class="Floor1">
+      <img src="FIRST_SIDE.png" alt="background" style="width: 750px;">
+    </div>
+    <div class="Floor2">
+      <img src="SECOND_SIDE.png" alt="background" style="width: 750px;">
+    </div>
   </div>
-  <div class="Floor2">
-    <img src="SECOND_SIDE.png" alt="background" style="width: 750px;">
-  </div>
-</div>
+</body>

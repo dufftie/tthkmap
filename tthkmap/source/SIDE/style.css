@@ -24,3 +24,8 @@
   margin-top: 0%;
   transition: 1s;
 }
+
+.body.zoom{
+  transform: scale(1.5);
+  transition: 1s;
+}
