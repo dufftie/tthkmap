@@ -19,7 +19,7 @@
   margin-top: 10%;
 }
 
-.Floor2.hideIt{
+.Floor2.showIt{
   opacity: 100;
   margin-top: 0%;
   transition: 1s;
