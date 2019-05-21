@@ -1,0 +1,40 @@
+.BackGround{
+  position: absolute;
+}
+
+.DBLOCK, .EBLOCK, .ABLOCK, .BLOCK, .CBLOCK{
+  position: absolute;
+  transform-origin:center;
+  transform: scale(1);
+  transition: 1s;
+}
+
+.DBLOCK:hover, .EBLOCK:hover, .ABLOCK:hover, .BLOCK:hover, .CBLOCK:hover{
+  transform-origin:center;
+  transform: scale(1.3);
+  transition: 1s;
+}
+
+.DBLOCK {
+    top: 81px;
+    left: 280px;
+    width: 215px;
+}
+
+.EBLOCK {
+    top: 150px;
+    left: 377px;
+    width: 180px;
+}
+.ABLOCK {
+    top: 250px;
+    left: 400px;
+    width: 215px;
+}
+.BLOCK {
+    top: 247px;
+    left: 138px;
+    width: 235px;
+}
+
+
