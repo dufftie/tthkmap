@@ -1,0 +1,56 @@
+<script type="text/javascript">
+function switchMap(){
+    var button = document.getElementsByClassName('switchButton')[0].value;
+    var floor1 = document.getElementsByClassName('Floor1')[0];
+    var floor2 = document.getElementsByClassName('Floor2')[0];
+    var switchButton = document.getElementsByClassName('switchButton')[0];
+
+    if(button=="first"){
+      floor1.classList.add('hideIt');
+      floor2.classList.add('showIt');
+      floor2.style.transition = 1;
+      switchButton.classList.add('Second');
+      document.getElementsByClassName('switchButton')[0].value = "second";
+      document.getElementsByClassName('switchButton')[0].innerHTML = "First";
+    }
+    else{
+      floor1.classList.remove('hideIt');
+      floor2.classList.remove('showIt');
+      switchButton.classList.remove('Second');
+       document.getElementsByClassName('switchButton')[0].value = "first";
+       document.getElementsByClassName('switchButton')[0].innerHTML = "Second";
+    }
+}
+
+function zoom(){
+  var body = document.getElementsByClassName('body')[0];
+  body.classList.add('zoom');
+}
+</script>
+
+
+<link rel="stylesheet" type="text/css" href="style.css">
+  <button onclick="switchMap()" class="switchButton" value="first">Second</button>
+<body class="body">
+  <div class="Container">
+    <div class="Floor1">
+      <img src="source/SIDE/FIRST_SIDE.png" alt="background" style="width: 750px;">
+      <div class="Front">
+        <img src="source/SIDE/DBACK.png" width="45%" class="DBLOCK"/>
+        <img src="source/SIDE/EBACK.png" width="45%" class="EBLOCK"/>
+        <img src="source/SIDE/CBACK.png" width="45%" class="CBLOCK"/>
+        <img src="source/SIDE/ABACK.png" width="45%" class="ABLOCK"/>
+        <img src="source/SIDE/BLOCK.png" width="45%" class="BLOCK"/>
+      </div>
+    </div>
+    <div class="Floor2">
+      <img src="source/SIDE/SECOND_SIDE.png" alt="background" style="width: 750px;">
+      <div class="Front">
+        <img src="source/SIDE/DBACK.png" width="45%" class="DBLOCK2"/>
+        <img src="source/SIDE/EBACK.png" width="45%" class="EBLOCK2"/>
+        <img src="source/SIDE/ABACK.png" width="45%" class="ABLOCK2"/>
+        <img src="source/SIDE/BLOCK.png" width="45%" class="BLOCK2"/>
+      </div>
+    </div>
+  </div>
+</body>
