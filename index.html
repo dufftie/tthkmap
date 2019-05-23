@@ -1,5 +1,5 @@
 <script type="text/javascript">
-function switchMap(){
+function switchFloor(){
     var button = document.getElementsByClassName('switchButton')[0].value;
     var floor1 = document.getElementsByClassName('Floor1')[0];
     var floor2 = document.getElementsByClassName('Floor2')[0];
@@ -21,25 +21,39 @@ function switchMap(){
        document.getElementsByClassName('switchButton')[0].innerHTML = "Second";
     }
 }
-
 function zoom(){
   var body = document.getElementsByClassName('body')[0];
   body.classList.add('zoom');
+}
+function switchMap(block){
+  var floor = document.getElementsByClassName('switchButton')[0].value;
+  var sideView = document.getElementsByClassName('SideView')[0];
+  var topView = document.getElementsByClassName('TopView')[0];
+  var topBackground = document.getElementsByClassName('topBackground')[0];
+  sideView.classList.add('hideIt');
+  topView.classList.add('showIt');
+  if(floor=='first'){
+    document.getElementById('topBackground').src='source/TOP/FIRST_TOP.png';
+  }
+  else{
+    document.getElementById('topBackground').src='source/TOP/SECOND_TOP.png';
+  }
+
 }
 </script>
 
 
 <link rel="stylesheet" type="text/css" href="style.css">
-  <button onclick="switchMap()" class="switchButton" value="first">Second</button>
+  <button onclick="switchFloor(); switchMap('')" class="switchButton" value="first">Second</button>
 <body class="body">
-  <div class="Side View">
+  <div class="SideView">
     <div class="Floor1">
       <img src="source/SIDE/FIRST_SIDE.png" alt="background" style="width: 750px;">
       <div class="Front">
         <img src="source/SIDE/DBACK.png" width="45%" class="DBLOCK"/>
-        <img src="source/SIDE/EBACK.png" width="45%" class="EBLOCK"/>
+        <img src="source/SIDE/EBACK.png" width="45%" class="EBLOCK" onclick="switchMap('E');"/>
         <img src="source/SIDE/CBACK.png" width="45%" class="CBLOCK"/>
-        <img src="source/SIDE/ABACK.png" width="45%" class="ABLOCK"/>
+        <img src="source/SIDE/ABACK.png" width="45%" class="ABLOCK" onclick="switchMap('A');"/>
         <img src="source/SIDE/BLOCK.png" width="45%" class="BLOCK"/>
       </div>
     </div>
@@ -47,10 +61,12 @@ function zoom(){
       <img src="source/SIDE/SECOND_SIDE.png" alt="background" style="width: 750px;">
       <div class="Front">
         <img src="source/SIDE/DBACK.png" width="45%" class="DBLOCK2"/>
-        <img src="source/SIDE/EBACK.png" width="45%" class="EBLOCK2"/>
-        <img src="source/SIDE/ABACK.png" width="45%" class="ABLOCK2"/>
+        <img src="source/SIDE/ABACK.png" width="45%" class="ABLOCK2" onclick="switchMap('A');"/>
         <img src="source/SIDE/BLOCK.png" width="45%" class="BLOCK2"/>
       </div>
     </div>
+  </div>
+  <div class="TopView">
+    <img src="" alt="background" class="topBackground" id="topBackground" width="800px">
   </div>
 </body>

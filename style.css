@@ -28,7 +28,7 @@
   z-index: 3;
 }
 .body{
-  transform: scale(3);
+  transform: scale(1);
   transition: 1s;
 }
 .Floor1, .Floor2{
@@ -119,4 +119,20 @@
     top: 235px;
     left: 135;
     width: 225px;
+}
+.SideView.hideIt{
+  opacity: 0;
+  transition: 1s;
+  margin-left:50%;
+}
+.TopView{
+  opacity: 0;
+}
+.TopView.img{
+  transform-origin: center;
+}
+.TopView.showIt{
+  opacity: 100;
+  transition: 1s;
+  margin-left: 10%;
 }
