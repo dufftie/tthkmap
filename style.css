@@ -27,8 +27,8 @@
   transition: 1s;
   z-index: 3;
 }
-.body.zoom{
-  transform: scale(1.5);
+.body{
+  transform: scale(3);
   transition: 1s;
 }
 .Floor1, .Floor2{
