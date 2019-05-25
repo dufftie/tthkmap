@@ -23,31 +23,13 @@
   transition: 1s;
   z-index: 3;
 }
-.body{
+body{
   transform: scale(1);
   transition: 1s;
+  width: 100%;
 }
 .Floor1, .Floor2{
   position: absolute;
-}
-.switchButton{
-  width: 600px;
-  font-size: 72px;
-  z-index: 10;
-  border: none;
-  background: linear-gradient(90deg, rgba(45,135,110,1) 0%, rgba(255,255,255,1) 45%, rgba(255,255,255,1) 55%, rgba(2,29,133,1) 100%);
-  background-size: 200%;
-  background-position: 100% 50%;
-  color: white;
-  margin-left: 200px;
-  transition: 1s;
-  text-align: right;
-  border-radius: 10px;
-}
-.switchButton.Second{
-  background-position: 0% 50%;
-  margin-left: 0;
-  text-align: left;
 }
 .DBLOCK, .EBLOCK, .ABLOCK, .BLOCK, .CBLOCK{
   position: absolute;
@@ -119,7 +101,6 @@
 .SideView.hideIt{
   opacity: 0;
   transition: 1s;
-  margin-left:50%;
 }
 .TopView{
   opacity: 0;
@@ -130,5 +111,44 @@
 .TopView.showIt{
   opacity: 100;
   transition: 1s;
-  margin-left: 10%;
+}
+.Buttons button{
+  width: 97%;
+  height: 9%;
+  font-size: 84px;
+  z-index: 10;
+  border: none;
+  background-size: 200%;
+  background-position: 100% 50%;
+  color: white;
+  position: fixed;
+  bottom: 0px;
+  margin: 10px;
+  border-radius: 30px;
+  position: absolute;
+}
+.switchButton{
+  background: linear-gradient(90deg, rgba(45,135,110,1) 0%, rgba(255,255,255,1) 50%, rgba(2,29,133,1) 100%);
+  text-align: right;
+  transition: 1s;
+}
+.switchButton.goUpper{
+  margin-bottom: 20%;
+}
+.switchButton.Second{
+  background-position: 0% 50%;
+  text-align: left;
+}
+.goBackButton{
+  text-align: center;
+  background: linear-gradient(90deg, rgba(255,121,121,1) 0%, rgba(158,0,0,1) 100%);
+  opacity: 0;
+}
+.goBackButton.showIt{
+  opacity: 100;
+  transition: 2s;
+}
+.goBackButton.hideIt{
+  opacity: 0;
+  transition: 2s;
 }
