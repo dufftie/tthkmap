@@ -44,11 +44,11 @@ function switchMap(block){
 
 
 <link rel="stylesheet" type="text/css" href="style.css">
-  <button onclick="switchFloor(); switchMap('')" class="switchButton" value="first">Second</button>
 <body class="body">
+  <div class="Map" style="height:1000px">
   <div class="SideView">
     <div class="Floor1">
-      <img src="source/SIDE/FIRST_SIDE.png" alt="background" style="width: 750px;">
+      <img src="source/SIDE/FIRST_SIDE.png" alt="background" style="width: 100%;">
       <div class="Front">
         <img src="source/SIDE/DBACK.png" width="45%" class="DBLOCK"/>
         <img src="source/SIDE/EBACK.png" width="45%" class="EBLOCK" onclick="switchMap('E');"/>
@@ -58,7 +58,7 @@ function switchMap(block){
       </div>
     </div>
     <div class="Floor2">
-      <img src="source/SIDE/SECOND_SIDE.png" alt="background" style="width: 750px;">
+      <img src="source/SIDE/SECOND_SIDE.png" alt="background" style="width: 100%;">
       <div class="Front">
         <img src="source/SIDE/DBACK.png" width="45%" class="DBLOCK2"/>
         <img src="source/SIDE/ABACK.png" width="45%" class="ABLOCK2" onclick="switchMap('A');"/>
@@ -68,5 +68,9 @@ function switchMap(block){
   </div>
   <div class="TopView">
     <img src="" alt="background" class="topBackground" id="topBackground" width="800px">
+  </div>
+  </div>
+  <div class="Buttons">
+    <button onclick="switchFloor();" class="switchButton" value="first">Second</button>
   </div>
 </body>
