@@ -100,6 +100,7 @@ body{
 }
 .SideView{
     transition: 1s;
+    z-index: 20;
 }
 .SideView.hideIt{
   opacity: 0;
@@ -109,6 +110,7 @@ body{
 }
 .TopView{
   opacity: 0;
+  z-index: 30;
 }
 .TopView.showIt{
   opacity: 100;
@@ -156,4 +158,97 @@ body{
 .goBackButton.hideIt{
   opacity: 0;
   transition: 2s;
+}
+.AMarkUp{
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: 250px;
+  left: 330px;
+  background-color: red;
+  border-radius: 10;
+  opacity: 0
+}
+.BMarkUp{
+  width: 250px;
+  height: 200px;
+  position: absolute;
+  top: 290px;
+  left: 0px;
+  background-color: green;
+  border-radius: 10;
+  opacity: 0;
+}
+.CMarkUp{
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: 250px;
+  left: 330px;
+  background-color: red;
+  border-radius: 10;
+  opacity: 0
+}
+.DMarkUp{
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: 250px;
+  left: 330px;
+  background-color: red;
+  border-radius: 10;
+  opacity: 0
+}
+.EMarkUp{
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: 250px;
+  left: 330px;
+  background-color: red;
+  border-radius: 10;
+  opacity: 0
+}
+.A2MarkUp{
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: 250px;
+  left: 330px;
+  background-color: red;
+  border-radius: 10;
+  opacity: 0
+}
+.B2MarkUp{
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: 250px;
+  left: 330px;
+  background-color: red;
+  border-radius: 10;
+  opacity: 0
+}
+.D2MarkUp{
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: 250px;
+  left: 330px;
+  background-color: red;
+  border-radius: 10;
+  opacity: 0
+}
+
+.hint{
+  animation: hintA;
+  animation-duration: 4s;
+}
+
+@keyframes hintA{
+  0% {opacity: 0;}
+  25% {opacity: 0.2;}
+  50% {opacity: 0;}
+  75% {opacity: 0.2;}
+  100% {opacity: 0;}
 }

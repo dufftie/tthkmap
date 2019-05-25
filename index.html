@@ -38,7 +38,7 @@ function switchFloor(){
     }
   }
 }
-function switchMap(act){
+function switchMap(act, block){
   var floor1 = document.getElementsByClassName('Floor1')[0];
   var floor2 = document.getElementsByClassName('Floor2')[0];
   var floor = document.getElementsByClassName('switchButton')[0].value;
@@ -63,6 +63,9 @@ function switchMap(act){
     else{
       document.getElementById('topBackground').src='source/TOP/SECOND_TOP.png';
     }
+    var hintBlock =
+    document.getElementsByClassName(hintBlock)[0].classList.add('hint');
+    
     goBackButton.value = "top";
   }
   else{
@@ -92,43 +95,59 @@ function switchMap(act){
     }
   }
 }
-
-function zoom(){
-  var body = document.getElementsByClassName('body')[0];
-  body.classList.add('zoom');
+function clearBlocks(){
+  document.getElementsByClassName('AMarkUp')[0].classList.remove('hint');
+  document.getElementsByClassName('BMarkUp')[0].classList.remove('hint');
+  document.getElementsByClassName('CMarkUp')[0].classList.remove('hint');
+  document.getElementsByClassName('DMarkUp')[0].classList.remove('hint');
+  document.getElementsByClassName('EMarkUp')[0].classList.remove('hint');
+  document.getElementsByClassName('A2MarkUp')[0].classList.remove('hint');
+  document.getElementsByClassName('B2MarkUp')[0].classList.remove('hint');
+  document.getElementsByClassName('D2MarkUp')[0].classList.remove('hint');
 }
+
 </script>
 
 
 <link rel="stylesheet" type="text/css" href="style.css">
 <body>
   <div class="Map">
-  <div class="SideView">
-    <div class="Floor1">
-      <img src="source/SIDE/FIRST_SIDE.png" alt="background" style="width: 100%;">
-      <div class="Front">
-        <img src="source/SIDE/DBACK.png" width="45%" class="DBLOCK"/>
-        <img src="source/SIDE/EBACK.png" width="45%" class="EBLOCK" onclick="switchMap('onTop');"/>
-        <img src="source/SIDE/CBACK.png" width="45%" class="CBLOCK"/>
-        <img src="source/SIDE/ABACK.png" width="45%" class="ABLOCK" onclick="switchMap('onTop');"/>
-        <img src="source/SIDE/BLOCK.png" width="45%" class="BLOCK"/>
+    <div class="SideView">
+      <div class="Floor1">
+        <img src="source/SIDE/FIRST_SIDE.png" alt="background" style="width: 100%;">
+        <div class="Front">
+          <img src="source/SIDE/DBACK.png" class="DBLOCK" onclick="switchMap('onTop', 'D');"/>
+          <img src="source/SIDE/EBACK.png" class="EBLOCK" onclick="switchMap('onTop', 'E');"/>
+          <img src="source/SIDE/CBACK.png" class="CBLOCK" onclick="switchMap('onTop', 'C');"/>
+          <img src="source/SIDE/ABACK.png" class="ABLOCK" onclick="switchMap('onTop', 'A');"/>
+          <img src="source/SIDE/BLOCK.png" class="BLOCK" onclick="switchMap('onTop', 'B');"/>
+        </div>
+      </div>
+      <div class="Floor2">
+        <img src="source/SIDE/SECOND_SIDE.png" alt="background" style="width: 100%;">
+        <div class="Front">
+          <img src="source/SIDE/DBACK.png" width="45%" class="DBLOCK2" onclick="switchMap('onTop', 'D2');"/>
+          <img src="source/SIDE/ABACK.png" width="45%" class="ABLOCK2" onclick="switchMap('onTop', 'A2');"/>
+          <img src="source/SIDE/BLOCK.png" width="45%" class="BLOCK2" onclick="switchMap('onTop', 'B2');"/>
+        </div>
       </div>
     </div>
-    <div class="Floor2">
-      <img src="source/SIDE/SECOND_SIDE.png" alt="background" style="width: 100%;">
-      <div class="Front">
-        <img src="source/SIDE/DBACK.png" width="45%" class="DBLOCK2"/>
-        <img src="source/SIDE/ABACK.png" width="45%" class="ABLOCK2" onclick="switchMap('onTop');"/>
-        <img src="source/SIDE/BLOCK.png" width="45%" class="BLOCK2"/>
+    <div class="TopView">
+      <img src="" alt="background" class="topBackground" id="topBackground" width="100%">
+      <div>
+        <div class="AMarkUp"></div>
+        <div class="BMarkUp"></div>
+        <div class="CMarkUp"></div>
+        <div class="DMarkUp"></div>
+        <div class="EMarkUp"></div>
+
+        <div class="A2MarkUp"></div>
+        <div class="B2MarkUp"></div>
+        <div class="D2MarkUp"></div>
       </div>
-    </div>
-  </div>
-  <div class="TopView">
-    <img src="" alt="background" class="topBackground" id="topBackground" width="100%">
-  </div>
   </div>
   <div class="Buttons">
-    <button onclick="switchMap('onSide');" class="goBackButton" value="side">Tagasi</button>
+    <button onclick="switchMap('onSide'); clearBlocks();" class="goBackButton" value="side">Tagasi</button>
     <button onclick="switchFloor();" class="switchButton" value="first">Teine</button>
   </div>
 </body>
