@@ -1,10 +1,12 @@
 <script type="text/javascript">
 function switchFloor(){
-    var button = document.getElementsByClassName('switchButton')[0].value;
-    var floor1 = document.getElementsByClassName('Floor1')[0];
-    var floor2 = document.getElementsByClassName('Floor2')[0];
-    var switchButton = document.getElementsByClassName('switchButton')[0];
+  var button = document.getElementsByClassName('switchButton')[0].value;
+  var floor1 = document.getElementsByClassName('Floor1')[0];
+  var floor2 = document.getElementsByClassName('Floor2')[0];
+  var switchButton = document.getElementsByClassName('switchButton')[0];
+  var goBackButton = document.getElementsByClassName('goBackButton')[0].value;
 
+  if(goBackButton == "side"){
     if(button=="first"){
       floor1.classList.add('hideIt');
       floor2.classList.add('showIt');
@@ -20,8 +22,25 @@ function switchFloor(){
        document.getElementsByClassName('switchButton')[0].value = "first";
        document.getElementsByClassName('switchButton')[0].innerHTML = "Teine";
     }
+  }
+  else{
+    if(button=="first"){
+      switchButton.classList.add('Second');
+      document.getElementsByClassName('switchButton')[0].value = "second";
+      document.getElementsByClassName('switchButton')[0].innerHTML = "Esimene";
+      document.getElementById('topBackground').src='source/TOP/SECOND_TOP.png';
+    }
+    else{
+      switchButton.classList.remove('Second');
+      document.getElementsByClassName('switchButton')[0].value = "first";
+      document.getElementsByClassName('switchButton')[0].innerHTML = "Teine";
+      document.getElementById('topBackground').src='source/TOP/FIRST_TOP.png';
+    }
+  }
 }
 function switchMap(act){
+  var floor1 = document.getElementsByClassName('Floor1')[0];
+  var floor2 = document.getElementsByClassName('Floor2')[0];
   var floor = document.getElementsByClassName('switchButton')[0].value;
   var sideView = document.getElementsByClassName('SideView')[0];
   var topView = document.getElementsByClassName('TopView')[0];
@@ -30,7 +49,9 @@ function switchMap(act){
   var goBackButton = document.getElementsByClassName('goBackButton')[0];
 
   if(act=='onTop'){
+    sideView.classList.remove('showIt');
     sideView.classList.add('hideIt');
+    topView.classList.remove('hideIt');
     topView.classList.add('showIt');
     switchButton.classList.add('goUpper');
     goBackButton.classList.add('showIt');
@@ -42,13 +63,33 @@ function switchMap(act){
     else{
       document.getElementById('topBackground').src='source/TOP/SECOND_TOP.png';
     }
+    goBackButton.value = "top";
   }
   else{
+    sideView.classList.add('showIt');
     sideView.classList.remove('hideIt');
+    topView.classList.add('hideIt');
     topView.classList.remove('showIt');
     switchButton.classList.remove('goUpper');
     goBackButton.classList.add('hideIt');
     goBackButton.classList.remove('showIt');
+    goBackButton.value = "side";
+
+    if(floor=="second"){
+      floor1.classList.add('hideIt');
+      floor2.classList.add('showIt');
+      floor2.style.transition = 1;
+      switchButton.classList.add('Second');
+      document.getElementsByClassName('switchButton')[0].value = "second";
+      document.getElementsByClassName('switchButton')[0].innerHTML = "Esimene";
+    }
+    else{
+      floor1.classList.remove('hideIt');
+      floor2.classList.remove('showIt');
+      switchButton.classList.remove('Second');
+       document.getElementsByClassName('switchButton')[0].value = "first";
+       document.getElementsByClassName('switchButton')[0].innerHTML = "Teine";
+    }
   }
 }
 
@@ -87,7 +128,7 @@ function zoom(){
   </div>
   </div>
   <div class="Buttons">
-    <button onclick="switchMap('onSide');" class="goBackButton">Tagasi</button>
+    <button onclick="switchMap('onSide');" class="goBackButton" value="side">Tagasi</button>
     <button onclick="switchFloor();" class="switchButton" value="first">Teine</button>
   </div>
 </body>
