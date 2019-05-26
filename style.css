@@ -136,15 +136,16 @@ body{
 }
 .switchButton{
   background: linear-gradient(90deg, rgba(45,135,110,1) 0%, rgba(255,255,255,1) 50%, rgba(2,29,133,1) 100%);
-  text-align: right;
+  padding-left: 50%;
   transition: 1s;
-}
-.switchButton.goUpper{
-  margin-bottom: 20%;
 }
 .switchButton.Second{
   background-position: 0% 50%;
-  text-align: left;
+  padding-left: 0%;
+  padding-right: 40%;
+}
+.switchButton.goUpper{
+  margin-bottom: 20%;
 }
 .goBackButton{
   text-align: center;
@@ -169,77 +170,77 @@ body{
   border-radius: 10;
   opacity: 0
 }
-.BMarkUp{
-  width: 250px;
-  height: 200px;
-  position: absolute;
-  top: 290px;
-  left: 0px;
-  background-color: green;
-  border-radius: 10;
-  opacity: 0;
+.BMarkUp {
+    width: 260px;
+    height: 200px;
+    position: absolute;
+    top: 290px;
+    left: 0px;
+    background-color: green;
+    border-radius: 10;
+    opacity: 0;
+    /* opacity: 100; */
 }
-.CMarkUp{
-  width: 300px;
-  height: 300px;
-  position: absolute;
-  top: 250px;
-  left: 330px;
-  background-color: red;
-  border-radius: 10;
-  opacity: 0
+.CMarkUp {
+    width: 320px;
+    height: 300px;
+    position: absolute;
+    top: 160px;
+    left: 650px;
+    background-color: #1c1c1c;
+    border-radius: 10;
+    opacity: 0;
 }
-.DMarkUp{
-  width: 300px;
-  height: 300px;
-  position: absolute;
-  top: 250px;
-  left: 330px;
-  background-color: red;
-  border-radius: 10;
-  opacity: 0
+.DMarkUp {
+    width: 260px;
+    height: 120px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: orange;
+    border-radius: 10;
+    opacity: 0;
 }
-.EMarkUp{
-  width: 300px;
-  height: 300px;
-  position: absolute;
-  top: 250px;
-  left: 330px;
-  background-color: red;
-  border-radius: 10;
-  opacity: 0
+.EMarkUp {
+    width: 225px;
+    height: 137px;
+    position: absolute;
+    top: 49px;
+    left: 195px;
+    background-color: steelblue;
+    border-radius: 10;
+    opacity: 0;
 }
-.A2MarkUp{
-  width: 300px;
-  height: 300px;
-  position: absolute;
-  top: 250px;
-  left: 330px;
-  background-color: red;
-  border-radius: 10;
-  opacity: 0
+.A2MarkUp {
+    width: 400px;
+    height: 300px;
+    position: absolute;
+    top: 520px;
+    left: 580px;
+    background-color: red;
+    border-radius: 10;
+    opacity: 0;
 }
-.B2MarkUp{
-  width: 300px;
-  height: 300px;
-  position: absolute;
-  top: 250px;
-  left: 330px;
-  background-color: red;
-  border-radius: 10;
-  opacity: 0
+.B2MarkUp {
+    width: 430px;
+    height: 300px;
+    position: absolute;
+    top: 520px;
+    left: 0px;
+    background-color: green;
+    border-radius: 10;
+    opacity: 0;
 }
-.D2MarkUp{
-  width: 300px;
-  height: 300px;
-  position: absolute;
-  top: 250px;
-  left: 330px;
-  background-color: red;
-  border-radius: 10;
-  opacity: 0
+.D2MarkUp {
+    width: 440px;
+    height: 190px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: orange;
+    border-radius: 10;
+    opacity: 0;
 }
-
 .hint{
   animation: hintA;
   animation-duration: 4s;
