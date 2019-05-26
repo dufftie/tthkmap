@@ -13,27 +13,27 @@ function switchFloor(){
       floor2.style.transition = 1;
       switchButton.classList.add('Second');
       document.getElementsByClassName('switchButton')[0].value = "second";
-      document.getElementsByClassName('switchButton')[0].innerHTML = "Esimesel";
+      document.getElementsByClassName('switchButton')[0].innerHTML = "Esimesele";
     }
     else{
       floor1.classList.remove('hideIt');
       floor2.classList.remove('showIt');
       switchButton.classList.remove('Second');
        document.getElementsByClassName('switchButton')[0].value = "first";
-       document.getElementsByClassName('switchButton')[0].innerHTML = "Teisel";
+       document.getElementsByClassName('switchButton')[0].innerHTML = "Teisele";
     }
   }
   else{
     if(button=="first"){
       switchButton.classList.add('Second');
       document.getElementsByClassName('switchButton')[0].value = "second";
-      document.getElementsByClassName('switchButton')[0].innerHTML = "Esimesel";
+      document.getElementsByClassName('switchButton')[0].innerHTML = "Esimesele";
       document.getElementById('topBackground').src='source/TOP/SECOND_TOP.png';
     }
     else{
       switchButton.classList.remove('Second');
       document.getElementsByClassName('switchButton')[0].value = "first";
-      document.getElementsByClassName('switchButton')[0].innerHTML = "Teisel";
+      document.getElementsByClassName('switchButton')[0].innerHTML = "Teisele";
       document.getElementById('topBackground').src='source/TOP/FIRST_TOP.png';
     }
   }
@@ -85,14 +85,14 @@ function switchMap(act, block){
       floor2.style.transition = 1;
       switchButton.classList.add('Second');
       document.getElementsByClassName('switchButton')[0].value = "second";
-      document.getElementsByClassName('switchButton')[0].innerHTML = "Esimesel";
+      document.getElementsByClassName('switchButton')[0].innerHTML = "Esimesele";
     }
     else{
       floor1.classList.remove('hideIt');
       floor2.classList.remove('showIt');
       switchButton.classList.remove('Second');
        document.getElementsByClassName('switchButton')[0].value = "first";
-       document.getElementsByClassName('switchButton')[0].innerHTML = "Teisel";
+       document.getElementsByClassName('switchButton')[0].innerHTML = "Teisele";
     }
   }
 }
@@ -149,6 +149,6 @@ function clearBlocks(){
   </div>
   <div class="Buttons">
     <button onclick="switchMap('onSide'); clearBlocks();" class="goBackButton" value="side">Tagasi</button>
-    <button onclick="switchFloor();" class="switchButton" value="first">Teisel</button>
+    <button onclick="switchFloor();" class="switchButton" value="first">Teisele</button>
   </div>
 </body>

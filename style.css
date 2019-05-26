@@ -220,8 +220,8 @@ body{
     width: 400px;
     height: 300px;
     position: absolute;
-    top: 520px;
-    left: 580px;
+    top: 370px;
+    left: 500px;
     background-color: red;
     border-radius: 10;
     opacity: 0;
@@ -230,18 +230,18 @@ body{
     width: 430px;
     height: 300px;
     position: absolute;
-    top: 520px;
+    top: 320px;
     left: 0px;
     background-color: green;
     border-radius: 10;
     opacity: 0;
 }
 .D2MarkUp {
-    width: 440px;
+    width: 360px;
     height: 190px;
     position: absolute;
     top: 0px;
-    left: 0px;
+    left: 50px;
     background-color: orange;
     border-radius: 10;
     opacity: 0;
