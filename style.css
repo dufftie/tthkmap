@@ -1,3 +1,5 @@
+@font-face { font-family: Oswald; src: url('source/fonts/Oswald-ExtraLight.ttf'); }
+
 .Floor1, .Floor2{
   position: absolute;
 }
@@ -27,6 +29,7 @@ body{
   transform: scale(1);
   transition: 1s;
   width: 100%;
+  font-family: Oswald;
 }
 .Floor1, .Floor2{
   position: absolute;
@@ -136,13 +139,14 @@ body{
 }
 .switchButton{
   background: linear-gradient(90deg, rgba(45,135,110,1) 0%, rgba(255,255,255,1) 50%, rgba(2,29,133,1) 100%);
-  padding-left: 50%;
+  padding-left: 60%;
   transition: 1s;
+  font-family: Oswald;
 }
 .switchButton.Second{
   background-position: 0% 50%;
   padding-left: 0%;
-  padding-right: 40%;
+  padding-right: 60%;
 }
 .switchButton.goUpper{
   margin-bottom: 20%;
@@ -151,6 +155,7 @@ body{
   text-align: center;
   background: linear-gradient(90deg, rgba(255,121,121,1) 0%, rgba(158,0,0,1) 100%);
   opacity: 0;
+  font-family: Oswald;
 }
 .goBackButton.showIt{
   opacity: 100;
