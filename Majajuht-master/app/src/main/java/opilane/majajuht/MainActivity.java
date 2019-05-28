@@ -14,12 +14,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         WebView myWebView = (WebView) findViewById(R.id.webview);
-        myWebView.loadUrl("file:///android_asset/korrus1.html");
+        myWebView.loadUrl("file:///android_asset/index.html");
         WebSettings webSettings = myWebView.getSettings();
         webSettings.setJavaScriptEnabled(true);
         webSettings.setBuiltInZoomControls(true);
         webSettings.setDisplayZoomControls(false);
+        webSettings.setUseWideViewPort(true);
         webSettings.setSupportZoom(true);
+        webSettings.setLoadWithOverviewMode(true);
         myWebView.setWebChromeClient(new WebChromeClient());
 
         myWebView.setWebChromeClient(new WebChromeClient(){
